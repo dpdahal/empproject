@@ -8,4 +8,6 @@ use Illuminate\Http\Request;
 class BackendController extends Controller
 {
     protected $_backend_page_path = 'backend.pages.';
+
+
 }

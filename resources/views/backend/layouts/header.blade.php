@@ -49,7 +49,9 @@
             <li class="nav-item dropdown pe-3">
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <img src="" alt="" class="rounded-circle">
+                    @if(auth()->user()->image)
+                        <img src="{{url(auth()->user()->image)}}" alt="" class="rounded-circle">
+                    @endif
                     <span class="d-none d-md-block dropdown-toggle ps-2">
                         {{auth()->user()->name}}
                     </span>
@@ -77,9 +79,9 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                        <a class="dropdown-item d-flex align-items-center" href="{{route('edit-user-profile')}}">
                             <i class="bi bi-gear"></i>
-                            <span>Account Settings</span>
+                            <span>Update Profile</span>
                         </a>
                     </li>
                     <li>
