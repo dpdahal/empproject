@@ -8,8 +8,11 @@ use App\Models\User;
 
 class UserController extends BackendController
 {
+
+
     public function index()
     {
+
         $authId = auth()->user()->id;
         $role = auth()->user()->role;
         if ($role != 'admin') {
@@ -19,6 +22,7 @@ class UserController extends BackendController
             $usersData = User::where('id', '!=', $authId)->get();
             return view($this->_backend_page_path . 'users.index', compact('usersData'));
         }
+
     }
 
     public function deleteFile($id)

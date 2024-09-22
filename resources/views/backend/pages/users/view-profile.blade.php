@@ -10,7 +10,6 @@
                         <div class="card-body">
                             <h1>View Profile</h1>
                             @include('lib.messages')
-
                             <h1 class="card-title">Name: {{$userData->name}}</h1>
                             <h1 class="card-title">Email: {{$userData->email}}</h1>
                             <h1 class="card-title">Role: {{$userData->role}}</h1>
@@ -22,9 +21,6 @@
                             <h1 class="card-title">
                                 Created At: {{$userData->created_at}}
                             </h1>
-
-
-
                         </div>
                     </div>
                 </div>
