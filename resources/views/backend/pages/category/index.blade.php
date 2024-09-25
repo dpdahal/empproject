@@ -26,7 +26,10 @@
                                 @foreach($categoryData as $category)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td>{{$category->name}}</td>
+                                        <td>{{$category->name}}
+                                            - ({{$category->blog->count()}})
+
+                                        </td>
                                         <td>
                                             @if($category->status == 'active')
                                                 <span class="badge bg-success">Active</span>

@@ -40,9 +40,9 @@ class UserController extends BackendController
     }
 
 
-    public function updateProfile(Request $request)
+    public function updateProfile(Request $request,$id)
     {
-        $authId = auth()->user()->id;
+        $authId = $id ?? auth()->user()->id;
         if ($request->isMethod('post')) {
             $userData = User::findOrFail($authId);
             $userData->name = $request->name;

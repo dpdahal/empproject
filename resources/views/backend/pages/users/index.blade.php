@@ -36,7 +36,7 @@
                                                 @if($user->role == 'admin')
                                                     <button class="btn btn-success btn-sm"
                                                             onclick="return confirm('Are you sure you want to change role?')"
-                                                      >{{$user->role}}</button>
+                                                    >{{$user->role}}</button>
                                                 @else
                                                     <button class="btn btn-danger btn-sm"
                                                             onclick="return confirm('Are you sure you want to change role?')"
@@ -51,7 +51,10 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{route('view-profile',$user->id)}}" class="btn btn-primary">View</a>
+                                            <a href="{{route('view-profile',$user->id)}}"
+                                               class="btn btn-primary">View</a>
+                                            <a href="{{route('edit-user-profile',$user->id)}}"
+                                               class="btn btn-primary">Edit</a>
 
                                         </td>
                                     </tr>

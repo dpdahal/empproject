@@ -14,6 +14,7 @@
     <link href="{{url('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{url('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
     <link href="{{url('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{url('ckeditor/contents.css')}}" rel="stylesheet">
 
 </head>
 
@@ -69,7 +70,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                        <a class="dropdown-item d-flex align-items-center" href="">
                             <i class="bi bi-person"></i>
                             <span>My Profile</span>
                         </a>
@@ -79,7 +80,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="{{route('edit-user-profile')}}">
+                        <a class="dropdown-item d-flex align-items-center" href="{{route('edit-user-profile',auth()->user()->id)}}">
                             <i class="bi bi-gear"></i>
                             <span>Update Profile</span>
                         </a>
